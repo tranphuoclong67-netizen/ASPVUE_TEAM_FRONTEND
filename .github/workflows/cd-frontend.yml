@@ -33,7 +33,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/vue-frontend:${{ github.sha }}
-            ${{ secrets.DOCKER_USERNAME }}/vue-frontend:latest
+            ${{ secrets.DOCKER_USERNAME }}/Front-end:${{ github.sha }}
+            ${{ secrets.DOCKER_USERNAME }}/Front-end:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
