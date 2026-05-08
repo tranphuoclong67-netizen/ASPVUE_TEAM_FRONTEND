@@ -30,10 +30,11 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
-          context: ./Front-end 
-          push: true
-          tags: |
-            ${{ secrets.DOCKER_USERNAME }}/front-end:${{ github.sha }}
-            ${{ secrets.DOCKER_USERNAME }}/front-end:latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+         context: .  
+         push: true
+         tags: |
+          ${{ secrets.DOCKER_USERNAME }}/front-end:${{ github.sha }}
+          ${{ secrets.DOCKER_USERNAME }}/front-end:latest
+         cache-from: type=gha
+         cache-to: type=gha,mode=max
+
