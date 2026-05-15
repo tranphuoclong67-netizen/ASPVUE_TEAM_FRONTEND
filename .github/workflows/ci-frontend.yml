@@ -49,8 +49,9 @@ jobs:
       - name: Build project
         run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
         env:
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+            VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+            VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+            VITE_API_URL: https://aspvue-team-backend.onrender.com
 
       - name: Deploy preview
         run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
